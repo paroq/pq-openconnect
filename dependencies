@@ -1,0 +1,4 @@
+part: 'pq-gcc',      branch: '4.9.1'
+part: 'pq-libxml2',  branch: '2.9.2'
+part: 'pq-zlib',     branch: '1.2.8'
+part: 'pq-openssl',  branch: '1.0.2'

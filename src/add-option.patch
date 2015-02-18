@@ -1,0 +1,30 @@
+diff -ur openconnect-7.04/main.c openconnect-7.04-new/main.c
+--- openconnect-7.04/main.c	2015-01-26 01:00:46.000000000 +0200
++++ openconnect-7.04-new/main.c	2015-02-18 13:56:30.815127385 +0200
+@@ -169,6 +169,7 @@
+ 	OPT_NO_PROXY,
+ 	OPT_NO_XMLPOST,
+ 	OPT_PIDFILE,
++	OPT_PASS,
+ 	OPT_PASSWORD_ON_STDIN,
+ 	OPT_PRINTCOOKIE,
+ 	OPT_RECONNECT_TIMEOUT,
+@@ -223,6 +224,7 @@
+ 	OPTION("proxy", 1, 'P'),
+ 	OPTION("proxy-auth", 1, OPT_PROXY_AUTH),
+ 	OPTION("user", 1, 'u'),
++	OPTION("pass", 1, OPT_PASS),
+ 	OPTION("verbose", 0, 'v'),
+ 	OPTION("version", 0, 'V'),
+ 	OPTION("cafile", 1, OPT_CAFILE),
+@@ -1216,6 +1218,10 @@
+ 			free(username);
+ 			username = dup_config_arg();
+ 			break;
++		case OPT_PASS:
++			free(password);
++			password = dup_config_arg();
++			break;	
+ 		case OPT_DISABLE_IPV6:
+ 			vpninfo->disable_ipv6 = 1;
+ 			break;

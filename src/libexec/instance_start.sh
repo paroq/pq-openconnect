@@ -6,16 +6,16 @@ then
 	exit 1
 fi
 
-if test -z "$PART_DIR"
+if test -z "$PQ_PART_DIR"
 then
-	printf "please specify the part directory in the env variable PART_DIR"
+	printf "please specify the part directory in the env variable PQ_PART_DIR"
 	exit 1
 fi
 
 printf "Starting vpn...\n"
 
 chassis_var_dir=$PQ_CHASSIS_VAR_DIR
-part_dir=$PART_DIR
+part_dir=$PQ_PART_DIR
 instance_name=$INSTANCE_NAME
 
 if test -f "$PWD/../etc/config.vpn"

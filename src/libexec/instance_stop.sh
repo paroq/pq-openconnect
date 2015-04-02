@@ -9,15 +9,15 @@ then
 	exit 1
 fi
 
-if test -z "$PART_DIR"
+if test -z "$PQ_PART_DIR"
 then
-	printf "please specify the part directory in the env variable PART_DIR"
+	printf "please specify the part directory in the env variable PQ_PART_DIR"
 	exit 1
 fi
 
 pid=
 chassis_var_dir=$PQ_CHASSIS_VAR_DIR
-part_dir=$PART_DIR
+part_dir=$PQ_PART_DIR
 
 if ! test -f ./$daemon.pid
 then

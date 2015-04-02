@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-if test -z "$CHASSIS_VAR_DIR"
+if test -z "$PQ_CHASSIS_VAR_DIR"
 then
-	printf "please specify the chassis var directory in the env variable CHASSIS_VAR_DIRECTORY"
+	printf "please specify the chassis var directory in the env variable PQ_CHASSIS_VAR_DIRECTORY"
 	exit 1
 fi
 
@@ -14,7 +14,7 @@ fi
 
 printf "Starting vpn...\n"
 
-chassis_var_dir=$CHASSIS_VAR_DIR
+chassis_var_dir=$PQ_CHASSIS_VAR_DIR
 part_dir=$PART_DIR
 instance_name=$INSTANCE_NAME
 

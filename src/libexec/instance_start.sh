@@ -16,7 +16,7 @@ printf "Starting vpn...\n"
 
 chassis_var_dir=$PQ_CHASSIS_VAR_DIR
 part_dir=$PQ_PART_DIR
-instance_name=$INSTANCE_NAME
+instance_name=$PQ_INSTANCE_NAME
 
 if test -f "$PWD/../etc/config.vpn"
 then
